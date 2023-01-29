@@ -27,7 +27,7 @@ inputs:
 
   java_options:
     type: string?
-    default: -XX:-UseContainerSupport -Xmx5g -Xms5g
+    default: -XX:-UseContainerSupport -Xmx50g -Xms50g
     inputBinding:
       position: 1
       shellQuote: false
