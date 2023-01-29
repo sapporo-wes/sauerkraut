@@ -47,7 +47,7 @@ outputs:
   out_fasta:
     type: File
     outputBinding:
-      glob: $(inputs.fasta.nameroot).$(inputs.interval_name).fasta.gz
+      glob: $(inputs.fasta.nameroot).$(inputs.interval_name).fasta
 
 arguments:
   - position: 2
@@ -57,4 +57,4 @@ arguments:
     valueFrom: ExtractSequences
   - position: 6
     prefix: -O
-    valueFrom: $(inputs.fasta.nameroot).$(inputs.interval_name).fasta.gz
+    valueFrom: $(inputs.fasta.nameroot).$(inputs.interval_name).fasta
