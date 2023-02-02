@@ -45,10 +45,11 @@ $ OUTDIR=reference_hg38 ; mkdir -p $OUTDIR ; for url in `cat sauerkraut/download
 Calculate bwa index files and create small test data by executing the following commands:
 ```
 $ cd /path/to/working/directory/
+$ WORKDIR=$(pwd)
 $ /bin/sh sauerkraut/scripts/reference_hg38.create_test_data.sh \
-     /path/to/working/directory/sauerkraut \
-     /path/to/working/directory/cwlenv \
-     /path/to/working/directory/reference_hg38
+     $WORKDIR/sauerkraut \
+     $WORKDIR/cwlenv \
+     $WORKDIR/reference_hg38
 ```
 Note that this step may take several hours, and therefore, **the use of `nohup` or job scheduler such as `slurm` is recommended.**
 
