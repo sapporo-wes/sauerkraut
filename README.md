@@ -72,10 +72,16 @@ $ /bin/sh sauerkraut/scripts/reference_hg38.create_test_data.sh \
 Note that this step may take several hours, and therefore, **the use of `nohup` or job scheduler such as `slurm` is recommended.**
 
 
-### reference_hg19
+### Step 4. Download and create test data related to `reference_hg19`
 
 
-### germlineWGS_hg38
+### Step 5. Download and create test data related to `germlineWGS_hg38`
+Download cram files from the URLs listed in **[germlineWGS_hg38.download_links.txt](./download_links/germlineWGS_hg38.download_links.txt)** by executing the following commnds:
+```
+$ cd /path/to/working/directory/
+$ OUTDIR=germline_hg38 ; mkdir -p $OUTDIR ; for url in `cat sauerkraut/download_links/germlineWGS_hg38.download_links.txt` ; do echo $url ; file=`basename $url` ; if [ ! -f ${OUTDIR}/$file ] ; then wget $url -O ${OUTDIR}/$file ; fi ; done
+```
+Note that this step may take several hours, and therefore, **the use of `nohup` or job scheduler such as `slurm` is recommended.**
 
 
 
