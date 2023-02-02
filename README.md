@@ -85,7 +85,7 @@ $ cd /path/to/working/directory/
 $ OUTDIR=reference_hg19/somatic ; mkdir -p $OUTDIR ; for url in `cat sauerkraut/download_links/reference_hg19_somatic.download_links.txt` ; do echo $url ; file=`basename $url` ; if [ ! -f ${OUTDIR}/$file ] ; then wget $url -O ${OUTDIR}/$file ; fi ; done
 ```
 
-Download RNA-seq related resource files from the URLs listed in **[reference_hg19_rna.download_links.txt](./download_links/reference_rna_somatic.download_links.txt)** by executing the following commnds:
+Download RNA-seq related resource files from the URLs listed in **[reference_hg19_rna.download_links.txt](./download_links/reference_hg19_rna.download_links.txt)** by executing the following commnds:
 ```
 $ cd /path/to/working/directory/
 $ OUTDIR=reference_hg19/rna ; mkdir -p $OUTDIR ; for url in `cat sauerkraut/download_links/reference_hg19_rna.download_links.txt` ; do echo $url ; file=`basename $url` ; if [ ! -f ${OUTDIR}/$file ] ; then wget $url -O ${OUTDIR}/$file ; fi ; done
