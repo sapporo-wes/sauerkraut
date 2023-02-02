@@ -1,0 +1,5 @@
+https://storage.googleapis.com/gatk-test-data/cnv/somatic/common_snps.interval_list
+https://storage.googleapis.com/gatk-test-data/cnv/somatic/ice_targets.tsv.interval_list
+https://storage.googleapis.com/gatk-test-data/cnv/somatic/wes-do-gc.pon.hdf5
+https://storage.googleapis.com/broad-public-datasets/funcotator/funcotator_dataSources.v1.6.20190124s.tar.gz
+https://storage.googleapis.com/broad-public-datasets/funcotator/transcriptList.exact_uniprot_matches.AKT1_CRLF2_FGFR1.txt
