@@ -48,6 +48,11 @@ $ cd /path/to/working/directory/
 $ OUTDIR=reference_hg38/sv ; mkdir -p $OUTDIR ; for url in `cat sauerkraut/download_links/reference_hg38_sv.download_links.txt` ; do echo $url ; file=`basename $url` ; if [ ! -f ${OUTDIR}/$file ] ; then wget $url -O ${OUTDIR}/$file ; fi ; done
 ```
 
+Download mitochondria (MT)-related resource files from the URLs listed in **[reference_hg38_mt.download_links.txt](./download_links/reference_hg38_mt.download_links.txt)** by executing the following commnds:
+```
+$ cd /path/to/working/directory/
+$ OUTDIR=reference_hg38/mt ; mkdir -p $OUTDIR ; for url in `cat sauerkraut/download_links/reference_hg38_mt.download_links.txt` ; do echo $url ; file=`basename $url` ; if [ ! -f ${OUTDIR}/$file ] ; then wget $url -O ${OUTDIR}/$file ; fi ; done
+```
 
 Calculate bwa index files and create small test data by executing the following commands:
 ```
