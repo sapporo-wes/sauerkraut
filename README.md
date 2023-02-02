@@ -50,6 +50,7 @@ $ /bin/sh sauerkraut/scripts/reference_hg38.create_test_data.sh \
      /path/to/working/directory/cwlenv \
      /path/to/working/directory/reference_hg38
 ```
+Note that this step may take several hours, and therefore, **the use of `nohup` or job scheduler such as `slurm` is recommended.**
 
 
 ### reference_hg19
