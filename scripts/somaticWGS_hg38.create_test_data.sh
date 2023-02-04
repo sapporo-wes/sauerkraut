@@ -206,33 +206,3 @@ if [ ! -f ${DATA_DIR}/${sample}_full_1.fastq.gz ] || [ ! -f ${DATA_DIR}/${sample
     echo ""
 fi
 
-if [ ! -f ${DATA_DIR}/${sample}_small_interleaved.fastq.gz ] ; then
-    echo ""
-    echo "----------------------------------------------"
-    echo "Create small-interleaved-fastq"
-    cd ${DATA_DIR}
-    cwltool --singularity \
-	${SRC_DIR}/Tools/bbmap-reformat-from-pairedfastq-to-interleavedfastq.cwl \
-	--fastq1 ${DATA_DIR}/${sample}_small_1.fastq.gz \
-	--fastq2 ${DATA_DIR}/${sample}_small_2.fastq.gz \
-	--outprefix ${sample}_small_interleaved
-    echo "...done."
-    echo "----------------------------------------------"
-    echo ""
-fi
-
-if [ ! -f ${DATA_DIR}/${sample}_full_interleaved.fastq.gz ] ; then
-    echo ""
-    echo "----------------------------------------------"
-    echo "Create full-interleaved-fastq"
-    cd ${DATA_DIR}
-    cwltool --singularity \
-	${SRC_DIR}/Tools/bbmap-reformat-from-pairedfastq-to-interleavedfastq.cwl \
-	--fastq1 ${DATA_DIR}/${sample}_full_1.fastq.gz \
-	--fastq2 ${DATA_DIR}/${sample}_full_2.fastq.gz \
-	--outprefix ${sample}_full_interleaved
-    echo "...done."
-    echo "----------------------------------------------"
-    echo ""
-fi
-
