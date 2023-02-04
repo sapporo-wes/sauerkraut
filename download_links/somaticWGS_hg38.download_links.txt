@@ -1,0 +1,2 @@
+https://storage.googleapis.com/gatk-best-practices/somatic-hg38/hcc1143_T_clean.bam
+https://storage.googleapis.com/gatk-best-practices/somatic-hg38/hcc1143_N_clean.bam
