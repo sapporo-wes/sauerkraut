@@ -124,7 +124,7 @@ Repeat the above commands by replacing sample ID (`HG00446`) to other sample IDs
 
 
 ### Step 6. Download and create test data related to `somaticWGS_hg38`
-Download cram files from the URLs listed in **[somaticWGS_hg38.download_links.txt](./download_links/somaticWGS_hg38.download_links.txt)** by executing the following commnds:
+Download bam files from the URLs listed in **[somaticWGS_hg38.download_links.txt](./download_links/somaticWGS_hg38.download_links.txt)** by executing the following commnds:
 ```
 $ cd /path/to/working/directory/
 $ OUTDIR=somaticWGS_hg38 ; mkdir -p $OUTDIR ; for url in `cat sauerkraut/download_links/somaticWGS_hg38.download_links.txt` ; do echo $url ; file=`basename $url` ; if [ ! -f ${OUTDIR}/$file ] ; then wget $url -O ${OUTDIR}/$file ; fi ; done
@@ -148,7 +148,12 @@ Repeat the above commands by replacing sample ID (`hcc1143_N`) to other sample I
 
 
 ### Step 7. Download and create test data related to `somaticCNV_hg19`
-
+Download bam files from the URLs listed in **[somaticCNV_hg19.download_links.txt](./download_links/somaticCNV_hg19.download_links.txt)** by executing the following commnds:
+```
+$ cd /path/to/working/directory/
+$ OUTDIR=somaticCNV_hg19 ; mkdir -p $OUTDIR ; for url in `cat sauerkraut/download_links/somaticCNV_hg19.download_links.txt` ; do echo $url ; file=`basename $url` ; if [ ! -f ${OUTDIR}/$file ] ; then wget $url -O ${OUTDIR}/$file ; fi ; done
+```
+Note that this step may take several hours, and therefore, **the use of `nohup` or job scheduler such as `slurm` is recommended.**
 
 ### Step 8. Download and create test data related to `germlineRNA_hg19`
 
