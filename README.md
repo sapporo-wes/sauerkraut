@@ -155,6 +155,22 @@ $ OUTDIR=somaticCNV_hg19 ; mkdir -p $OUTDIR ; for url in `cat sauerkraut/downloa
 ```
 Note that this step may take several hours, and therefore, **the use of `nohup` or job scheduler such as `slurm` is recommended.**
 
+Create test data by executing the following commands:
+```
+$ cd /path/to/working/directory/
+$ WORKDIR=$(pwd)
+$ /bin/sh sauerkraut/scripts/somaticCNV_hg19.create_test_data.sh \
+     $WORKDIR/sauerkraut \
+     $WORKDIR/cwlenv \
+     $WORKDIR/reference_hg19 \
+     $WORKDIR/somaticCNV_hg19 \
+     SM-74P4M
+```
+Note that this step may take several hours, and therefore, **the use of `nohup` or job scheduler such as `slurm` is recommended.**
+Repeat the above commands by replacing sample ID (`SM-74P4M`) to other sample ID:
+- `SM-74NEG`
+
+
 ### Step 8. Download and create test data related to `germlineRNA_hg19`
 Download bam files from the URLs listed in **[germlineRNA_hg19.download_links.txt](./download_links/germlineRNA_hg19.download_links.txt)** by executing the following commnds:
 ```
