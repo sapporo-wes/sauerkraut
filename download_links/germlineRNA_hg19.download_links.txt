@@ -1,0 +1,1 @@
+https://storage.googleapis.com/gatk-test-data/rna_bam/NA12878_b37/NA12878.unmapped.bam
