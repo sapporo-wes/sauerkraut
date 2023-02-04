@@ -156,7 +156,12 @@ $ OUTDIR=somaticCNV_hg19 ; mkdir -p $OUTDIR ; for url in `cat sauerkraut/downloa
 Note that this step may take several hours, and therefore, **the use of `nohup` or job scheduler such as `slurm` is recommended.**
 
 ### Step 8. Download and create test data related to `germlineRNA_hg19`
-
+Download bam files from the URLs listed in **[germlineRNA_hg19.download_links.txt](./download_links/germlineRNA_hg19.download_links.txt)** by executing the following commnds:
+```
+$ cd /path/to/working/directory/
+$ OUTDIR=germlineRNA_hg19 ; mkdir -p $OUTDIR ; for url in `cat sauerkraut/download_links/germlineRNA_hg19.download_links.txt` ; do echo $url ; file=`basename $url` ; if [ ! -f ${OUTDIR}/$file ] ; then wget $url -O ${OUTDIR}/$file ; fi ; done
+```
+Note that this step may take several hours, and therefore, **the use of `nohup` or job scheduler such as `slurm` is recommended.**
 
 
 
