@@ -10,6 +10,12 @@
 
 ## Steps to create test data
 
+### Requirements
+To download and create test data, the following software is needed:
+- python (version 3+)
+- singularity
+- wget
+
 ### Step 1. Install `cwltool`
 
 You can install `cwltool` by executing the following commands: 
