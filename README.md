@@ -179,6 +179,17 @@ $ OUTDIR=germlineRNA_hg19 ; mkdir -p $OUTDIR ; for url in `cat sauerkraut/downlo
 ```
 Note that this step may take several hours, and therefore, **the use of `nohup` or job scheduler such as `slurm` is recommended.**
 
-
-
+Create test data by executing the following commands:
+```
+$ cd /path/to/working/directory/
+$ WORKDIR=$(pwd)
+$ /bin/sh sauerkraut/scripts/germlineRNA_hg19.create_test_data.sh \
+     $WORKDIR/sauerkraut \
+     $WORKDIR/cwlenv \
+     $WORKDIR/reference_hg19 \
+     $WORKDIR/germlineRNA_hg19 \
+     NA12878
+```
+Note that this step may take several hours, and therefore, **the use of `nohup` or job scheduler such as `slurm` is recommended.**
+There is no need to repeat the above commands. 
 
