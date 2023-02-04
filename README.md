@@ -131,6 +131,21 @@ $ OUTDIR=somaticWGS_hg38 ; mkdir -p $OUTDIR ; for url in `cat sauerkraut/downloa
 ```
 Note that this step may take several hours, and therefore, **the use of `nohup` or job scheduler such as `slurm` is recommended.**
 
+Create test data by executing the following commands:
+```
+$ cd /path/to/working/directory/
+$ WORKDIR=$(pwd)
+$ /bin/sh sauerkraut/scripts/somaticWGS_hg38.create_test_data.sh \
+     $WORKDIR/sauerkraut \
+     $WORKDIR/cwlenv \
+     $WORKDIR/reference_hg38 \
+     $WORKDIR/somaticWGS_hg38 \
+     hcc1143_N
+```
+Note that this step may take several hours, and therefore, **the use of `nohup` or job scheduler such as `slurm` is recommended.**
+Repeat the above commands by replacing sample ID (`hcc1143_N`) to other sample ID:
+- `hcc1143_T`
+
 
 ### Step 7. Download and create test data related to `somaticCNV_hg19`
 
