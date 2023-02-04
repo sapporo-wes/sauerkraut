@@ -372,6 +372,51 @@ Note that this step may take several hours, and therefore, **the use of `nohup` 
 Repeat the above commands by replacing sample ID (`SM-74P4M`) to other sample ID:
 - `SM-74NEG`
 
+The following files will be downloaded or created:
+```{somaticCNV_hg19}
+/path/to/working/directory/somaticCNV_hg19
+|--SM-74NEG.bam
+|--SM-74NEG_full.bam
+|--SM-74NEG_full.bam.bai
+|--SM-74NEG_full.cram
+|--SM-74NEG_full.cram.crai
+|--SM-74NEG_full.unmap.bam
+|--SM-74NEG_full.unmap.bam.bai
+|--SM-74NEG_full_1.fastq.gz
+|--SM-74NEG_full_2.fastq.gz
+|--SM-74NEG_full_interleaved.fastq.gz
+|--SM-74NEG_small.bam
+|--SM-74NEG_small.bam.bai
+|--SM-74NEG_small.cram
+|--SM-74NEG_small.cram.crai
+|--SM-74NEG_small.unmap.bam
+|--SM-74NEG_small.unmap.bam.bai
+|--SM-74NEG_small_1.fastq.gz
+|--SM-74NEG_small_2.fastq.gz
+|--SM-74NEG_small_interleaved.fastq.gz
+|--SM-74P4M.bam
+|--SM-74P4M_full.bam
+|--SM-74P4M_full.bam.bai
+|--SM-74P4M_full.cram
+|--SM-74P4M_full.cram.crai
+|--SM-74P4M_full.unmap.bam
+|--SM-74P4M_full.unmap.bam.bai
+|--SM-74P4M_full_1.fastq.gz
+|--SM-74P4M_full_2.fastq.gz
+|--SM-74P4M_full_interleaved.fastq.gz
+|--SM-74P4M_small.bam
+|--SM-74P4M_small.bam.bai
+|--SM-74P4M_small.cram
+|--SM-74P4M_small.cram.crai
+|--SM-74P4M_small.unmap.bam
+|--SM-74P4M_small.unmap.bam.bai
+|--SM-74P4M_small_1.fastq.gz
+|--SM-74P4M_small_2.fastq.gz
+|--SM-74P4M_small_interleaved.fastq.gz
+|--broadinstitute_gatk:4.3.0.0.sif
+|--mgibio_samtools:1.16.1.sif
+|--quay.io_biocontainers_bbmap:39.01--h5c4e2a8_0.sif
+```
 
 ### Step 8. Download and create test data related to `germlineRNA_hg19`
 Download bam files from the URLs listed in **[germlineRNA_hg19.download_links.txt](./download_links/germlineRNA_hg19.download_links.txt)** by executing the following commnds:
