@@ -1,0 +1,2 @@
+https://storage.googleapis.com/gatk-test-data/cnv/somatic/SM-74NEG.bam
+https://storage.googleapis.com/gatk-test-data/cnv/somatic/SM-74P4M.bam
