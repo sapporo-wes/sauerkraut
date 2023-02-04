@@ -299,6 +299,49 @@ Note that this step may take several hours, and therefore, **the use of `nohup` 
 Repeat the above commands by replacing sample ID (`hcc1143_N`) to other sample ID:
 - `hcc1143_T`
 
+The following files will be downloaded or created:
+```{somaticWGS_hg38}
+/path/to/working/directory/somaticWGS_hg38
+|--broadinstitute_gatk:4.3.0.0.sif
+|--hcc1143_N_clean.bam
+|--hcc1143_N_full.bam
+|--hcc1143_N_full.bam.bai
+|--hcc1143_N_full.cram
+|--hcc1143_N_full.cram.crai
+|--hcc1143_N_full.unmap.bam
+|--hcc1143_N_full.unmap.bam.bai
+|--hcc1143_N_full_1.fastq.gz
+|--hcc1143_N_full_2.fastq.gz
+|--hcc1143_N_small.bam
+|--hcc1143_N_small.bam.bai
+|--hcc1143_N_small.cram
+|--hcc1143_N_small.cram.crai
+|--hcc1143_N_small.unmap.bam
+|--hcc1143_N_small.unmap.bam.bai
+|--hcc1143_N_small_1.fastq.gz
+|--hcc1143_N_small_2.fastq.gz
+|--hcc1143_T_clean.bam
+|--hcc1143_T_full.bam
+|--hcc1143_T_full.bam.bai
+|--hcc1143_T_full.cram
+|--hcc1143_T_full.cram.crai
+|--hcc1143_T_full.unmap.bam
+|--hcc1143_T_full.unmap.bam.bai
+|--hcc1143_T_full_1.fastq.gz
+|--hcc1143_T_full_2.fastq.gz
+|--hcc1143_T_small.bam
+|--hcc1143_T_small.bam.bai
+|--hcc1143_T_small.cram
+|--hcc1143_T_small.cram.crai
+|--hcc1143_T_small.unmap.bam
+|--hcc1143_T_small.unmap.bam.bai
+|--hcc1143_T_small_1.fastq.gz
+|--hcc1143_T_small_2.fastq.gz
+|--mgibio_samtools:1.16.1.sif
+|--quay.io_biocontainers_bbmap:39.01--h5c4e2a8_0.sif
+```
+
+
 
 ### Step 7. Download and create test data related to `somaticCNV_hg19`
 Download bam files from the URLs listed in **[somaticCNV_hg19.download_links.txt](./download_links/somaticCNV_hg19.download_links.txt)** by executing the following commnds:
