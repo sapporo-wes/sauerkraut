@@ -38,19 +38,19 @@ inputs:
     inputBinding:
       position: 2
 
-  region_name:
+  prefix:
     type: string
-    doc: "Region name"
+    doc: "Output prefix"
 
 outputs:
   - id: cram
     type: File
     outputBinding:
-      glob: $(inputs.cram.nameroot).$(inputs.region_name).cram
+      glob: $(inputs.prefix).cram
 
 arguments:
   - position: 4
     prefix: -o 
-    valueFrom: $(inputs.cram.nameroot).$(inputs.region_name).cram
+    valueFrom: $(inputs.prefix).cram
   - position: 5
     valueFrom: --cram
