@@ -51,6 +51,15 @@ This repository contains source codes to download and create the following test 
      - **`NA12878_full.bam`:** A `unmap.bam` file for the full dataset. The file size in a Linux environment was `3321881612`.
      - **`NA12878_small.bam`:** A `unmap.bam` file for the small dataset. The file size in a Linux environment was `5313719`.
 
+The above datasets are designed to use as test datasets for the following workflows:
+- **`Data pre-processing (hg38)`:** Workflows to perform the data pre-processing for variant discovery from short-read WGS data.
+     - Best practice for this step is described in [GATK web site (Data-pre-processing-for-variant-discovery)](https://gatk.broadinstitute.org/hc/en-us/articles/360035535912-Data-pre-processing-for-variant-discovery). The raw sequence data (either in `fastq.gz (paired)` or `unmap.map` format) will be mapped to a reference genome, and subsequently, the alignment data will be cleaned up by removing PCR duplicates and calibrating base quality scores. 
+- **`Germline short variant call from bam/cram (hg38)`:**
+- **`Somatic short variant call from bm/cram (hg38)`:**
+- **`Germline structural variation call from bam/cram (hg38)`:**
+- **`Mitochondria short variant call from bam/cram (hg38)`:**
+- **`Somatic CNV call from bam/cram (hg19)`:**
+- **`Germline short variant call from RNA-Seq data (hg19)`:**
 
 
 ## Steps to create test data
