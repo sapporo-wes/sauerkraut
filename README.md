@@ -25,6 +25,15 @@ This repository contains source codes to download and create the following test 
      - **`HG00446_mtsmall.cram`:** A `cram` file for the mitochondria-specific small dataset. The file size in a Linux environment was `28956734`.
      - **`HG00446_mtsmall.bam`:** A `bam` file for the mitochondria-specific small dataset. The file size in a Linux environment was `58621592`.
 - **`somaticWGS_hg38`:** Somatic WGS data mapped on hg38.
+     - Our program will download somatic WGS data in the `bam` format (a tumor samples `hcc1143_T` and a matched control sample `hcc1143_N`) from the URLs listed in **[somaticWGS_hg38.download_links.txt](./download_links/somaticWGS_hg38.download_links.txt)**. Then our program will calculate `cram`, `unmap.bam`, and `fastq.gz` (paired) files from the `bam` file. In addition, our program will calculate small `cram`, `bam`, `unmap.bam`, and `fastq.gz` (paired) files by extracting sequence reads mapped onto the region `chr1:1000001-1200000`. Index files (`.crai` and `.bai`) will be calculated for all `cram` and `bam` files.  
+     - **`hcc1143_T_full.cram`:** A `cram` file for the full dataset. The file size in a Linux environment was `8488487437`.
+     - **`hcc1143_T_full.bam`:** A `bam` file for the full dataset. The file size in a Linux environment was `13478097244`.
+     - **`hcc1143_T_full.unmap.bam`:** A `unmap.bam` file for the full dataset. The file size in a Linux environment was `13863994168`.
+     - **`hcc1143_T_full_1.fastq.gz` and `hcc1143_T_full_2.fastq.gz`:** Paired `fastq.gz` files for the full dataset. The file sizes in a Linux environment were `3038008245` and `2526825944`, respectively.
+     - **`hcc1143_T_small.cram`:** A `cram` file for the small dataset. The file size in a Linux environment was `1068517`.
+     - **`hcc1143_T_small.bam`:** A `bam` file for the small dataset. The file size in a Linux environment was `1698508`.
+     - **`hcc1143_T_small.unmap.bam`:** A `unmap.bam` small for the full dataset. The file size in a Linux environment was `1829678`.
+     - **`hcc1143_T_small_1.fastq.gz` and `hcc1143_T_small_2.fastq.gz`:** Paired `fastq.gz` files for the small dataset. The file sizes in a Linux environment were `416961` and `347292`, respectively.
 - **`somaticCNV_hg19`:** Somatic copy number variation (CNV) data mapped on hg19.
 - **`germlineRNA_hg19`:** Germline RNA-Seq data mapped on hg19.
 
