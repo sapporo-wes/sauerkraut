@@ -4,11 +4,11 @@
 
 This repository contains source codes to download and create the following test datasets:
 - **`reference_hg38`:** Reference fasta file, index files, and resource files according to human genome assembly hg38.
-     - **`Homo_sapiens_assembly38.fasta`:** Full reference file. The file size in a Linux environment was `3249912778`.
-     - **`Homo_sapiens_assembly38.small.fasta`:** Small reference file. The file size in a Linux environment was `202524`. This small file contains reference sequence of the region `chr1:1000001-1200000`. 
-     - Our program will download the full reference, index, and resource files from the URLs listed in **[reference_hg38.download_links.txt](./download_links/reference_hg38.download_links.txt)**. Then, our program will calculate additional index files for the full reference as well as reference, index, and resource files for the small dataset. 
+     - Our program will download sequence, index, and resource files for a full reference dataset from the URLs listed in **[reference_hg38.download_links.txt](./download_links/reference_hg38.download_links.txt)**. Then, our program will calculate additional index files for the full reference as well as squence, index, and resource files for a small reference dataset. 
+     - **`Homo_sapiens_assembly38.fasta`:** A sequence file for the full reference dataset. The file size in a Linux environment was `3249912778`. Index files for the full reference (`.fasta.fai`, `.fasta.alt`, and `.dict`) will be downloaded. Additional index files for the full reference (`.fasta.amb`, `.fasta.ann`, `.fasta.bwt`, `.fasta.pac`, and `.fasta.sa`) will be calculated. Resource files for the full reference dataset such as `Homo_sapiens_assembly38.dbsnp138.vcf` and `Mills_and_1000G_gold_standard.indels.hg38.vcf.gz` will be downloaded.
+     - **`Homo_sapiens_assembly38.small.fasta`:** A sequence file for the small reference dataset. The file size in a Linux environment was `202524`. This small file contains reference sequence of the region `chr1:1000001-1200000`. Index and resource files for the small reference will be calculated. 
 - **`reference_hg19`:** Reference fasta file, index files, and resource files according to human genome assembly hg19.
-     - **`Homo_sapiens_assembly19.fasta`:** Full reference file. The file size in a Linux environment was `3140756381`.
+     - **`Homo_sapiens_assembly19.fasta`:** A sequence file for the full reference dataset. The file size in a Linux environment was `3140756381`. 
      - Our program will download the full reference, index, and resource files from the URLs listed in **[reference_hg19.download_links.txt](./download_links/reference_hg19.download_links.txt)**. 
 - **`germlineWGS_hg38`:** Germline whole genome sequence (WGS) data mapped on hg38.
 - **`somaticWGS_hg38`:** Somatic WGS data mapped on hg38.
