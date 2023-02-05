@@ -47,6 +47,10 @@ This repository contains source codes to download and create the following test 
      - **`SM-74P4M_small_1.fastq.gz` and `SM-74P4M_small_2.fastq.gz`:** Paired `fastq.gz` files for the small dataset. The file sizes in a Linux environment were `1456295` and `1460187`, respectively.
      - **`SM-74P4M_small_interleaved.fastq.gz`:** A interleaved `fastq.gz` file for the small dataset. The file size in a Linux environment was `2381216`.
 - **`germlineRNA_hg19`:** Germline RNA-Seq data mapped on hg19.
+     - Our program will download germline RNA-Seq data in the `unmap.bam` format (a sample `NA12878`) from the URLs listed in **[germlineRNA_hg19.download_links.txt](./download_links/germlineRNA_hg19.download_links.txt)**. Then our program will calculate small `unmap.bam` file from by down-sampling sequence. Index files (`.bai`) will be calculated for the `unmap.bam` files.
+     - **`NA12878_full.bam`:** A `unmap.bam` file for the full dataset. The file size in a Linux environment was `3321881612`.
+     - **`NA12878_small.bam`:** A `unmap.bam` file for the small dataset. The file size in a Linux environment was `5313719`.
+
 
 
 ## Steps to create test data
