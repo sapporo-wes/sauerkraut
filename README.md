@@ -9,6 +9,7 @@ This repository contains source codes to download and create the following test 
      - Our program will download the full reference, index, and resource files from the URLs listed in **[reference_hg38.download_links.txt](./download_links/reference_hg38.download_links.txt)**. Then, our program will calculate additional index files for the full reference as well as reference, index, and resource files for the small dataset. 
 - **`reference_hg19`:** Reference fasta file, index files, and resource files according to human genome assembly hg19.
      - **`Homo_sapiens_assembly19.fasta`:** Full reference file. The file size in a Linux environment was `3140756381`.
+     - Our program will download the full reference, index, and resource files from the URLs listed in **[reference_hg19.download_links.txt](./download_links/reference_hg19.download_links.txt)**. 
 - **`germlineWGS_hg38`:** Germline whole genome sequence (WGS) data mapped on hg38.
 - **`somaticWGS_hg38`:** Somatic WGS data mapped on hg38.
 - **`somaticCNV_hg19`:** Somatic copy number variation (CNV) data mapped on hg19.
