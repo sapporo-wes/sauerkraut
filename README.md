@@ -2,9 +2,13 @@
 
 ## About this project
 
-This repository contains source codes to download and create test datasets. The following test data will be downloaded and created:
+This repository contains source codes to download and create the following test datasets:
 - **`reference_hg38`:** Reference fasta file, index files, and resource files according to human genome assembly hg38.
+     - **`Homo_sapiens_assembly38.fasta`:** Full reference file. The file size in a Linux environment was `3249912778`.
+     - **`Homo_sapiens_assembly38.small.fasta`:** Small reference file. The file size in a Linux environment was `202524`. This small file contains reference sequence of the region `chr1:1000001-1200000`. 
+     - Our program will download the full reference, index, and resource files from the URLs listed in **[reference_hg38.download_links.txt](./download_links/reference_hg38.download_links.txt)**. Then, our program will calculate additional index files for the full reference as well as reference, index, and resource files for the small dataset. 
 - **`reference_hg19`:** Reference fasta file, index files, and resource files according to human genome assembly hg19.
+     - **`Homo_sapiens_assembly19.fasta`:** Full reference file. The file size in a Linux environment was `3140756381`.
 - **`germlineWGS_hg38`:** Germline whole genome sequence (WGS) data mapped on hg38.
 - **`somaticWGS_hg38`:** Somatic WGS data mapped on hg38.
 - **`somaticCNV_hg19`:** Somatic copy number variation (CNV) data mapped on hg19.
