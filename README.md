@@ -12,6 +12,18 @@ This repository contains source codes to download and create the following test 
      - **`Homo_sapiens_assembly19.fasta`:** A sequence file for the full reference dataset. The file size in a Linux environment was `3140756381`. Index files for the full reference (`.fasta.fai` and `.dict`) will be downloaded. Resource files for the full reference dataset such as `dbsnp_138.b37.vcf.gz` and `Mills_and_1000G_gold_standard.indels.b37.vcf.gz` will be downloaded. 
 - **`germlineWGS_hg38`:** Germline whole genome sequence (WGS) data mapped on hg38.
      - Our program will download germline WGS data in the `cram` format (10 samples: `HG00446`, `NA12718`, `NA12775`, `NA12842`, `NA18536`, `NA18549`, `NA20752`, `NA20757`, `NA20764`, and `NA20769`) from the URLs listed in **[germlineWGS_hg38.download_links.txt](./download_links/germlineWGS_hg38.download_links.txt)**. Then our program will calculate `bam`, `unmap.bam`, and `fastq.gz` (paired and interleaved) files from the `cram` file. In addition, our program will calculate small `cram`, `bam`, `unmap.bam`, and `fastq.gz` (paired and interleaved) files by extracting sequence reads mapped onto the region `chr1:1000001-1200000`. Mitochondria-specific small `cram`, `bam`, `unmap.bam`, and `fastq.gz` (paired and interleaved) files will be calculated by extracting sequence reads mapped onto the `chrM`. Index files (`.crai` and `.bai`) will be calculated for all `cram` and `bam` files.  
+     - **`HG00446_full.cram`:** A `cram` file for the full dataset. The file size in a Linux environment was `15575753770`.
+     - **`HG00446_full.bam`:** A `bam` file for the full dataset. The file size in a Linux environment was `41284415391`.
+     - **`HG00446_full.unmap.bam`:** A `unmap.bam` file for the full dataset. The file size in a Linux environment was `46725838640`.
+     - **`HG00446_full_1.fastq.gz` and `HG00446_full_2.fastq.gz`:** Paired `fastq.gz` files for the full dataset. The file sizes in a Linux environment were `15602892502` and `16931512190`, respectively.
+     - **`HG00446_full_interleaved.fastq.gz`:** A interleaved `fastq.gz` file for the full dataset. The file size in a Linux environment was `22051523852`.
+     - **`HG00446_small.cram`:** A `cram` file for the small dataset. The file size in a Linux environment was `1268473`.
+     - **`HG00446_small.bam`:** A `bam` file for the small dataset. The file size in a Linux environment was `3393270`.
+     - **`HG00446_small.unmap.bam`:** A `unmap.bam` file for the small dataset. The file size in a Linux environment was `3613702`.
+     - **`HG00446_small_1.fastq.gz` and `HG00446_small_2.fastq.gz`:** Paired `fastq.gz` files for the small dataset. The file sizes in a Linux environment were `1285315` and `1404875`, respectively.
+     - **`HG00446_small_interleaved.fastq.gz`:** A interleaved `fastq.gz` file for the small dataset. The file size in a Linux environment was `1874817`.
+     - **`HG00446_mtsmall.cram`:** A `cram` file for the mitochondria-specific small dataset. The file size in a Linux environment was `28956734`.
+     - **`HG00446_mtsmall.bam`:** A `bam` file for the mitochondria-specific small dataset. The file size in a Linux environment was `58621592`.
 - **`somaticWGS_hg38`:** Somatic WGS data mapped on hg38.
 - **`somaticCNV_hg19`:** Somatic copy number variation (CNV) data mapped on hg19.
 - **`germlineRNA_hg19`:** Germline RNA-Seq data mapped on hg19.
