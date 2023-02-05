@@ -35,6 +35,17 @@ This repository contains source codes to download and create the following test 
      - **`hcc1143_T_small.unmap.bam`:** A `unmap.bam` small for the full dataset. The file size in a Linux environment was `1829678`.
      - **`hcc1143_T_small_1.fastq.gz` and `hcc1143_T_small_2.fastq.gz`:** Paired `fastq.gz` files for the small dataset. The file sizes in a Linux environment were `416961` and `347292`, respectively.
 - **`somaticCNV_hg19`:** Somatic copy number variation (CNV) data mapped on hg19.
+     - Our program will download somatic WGS data used for CNV analysis in the `bam` format (a tumor samples `SM-74P4M` and a matched control sample `SM-74NEG`) from the URLs listed in **[somaticCNV_hg19.download_links.txt](./download_links/somaticCNV_hg19.download_links.txt)**. Then our program will calculate `cram`, `unmap.bam`, and `fastq.gz` (paired and interleaved) files from the `bam` file. In addition, our program will calculate small `cram`, `bam`, `unmap.bam`, and `fastq.gz` (paired and interleaved) files by extracting sequence reads mapped onto the region `1:1000001-1200000`. Index files (`.crai` and `.bai`) will be calculated for all `cram` and `bam` files.  
+     - **`SM-74P4M_full.cram`:** A `cram` file for the full dataset. The file size in a Linux environment was `18274132829`.
+     - **`SM-74P4M_full.bam`:** A `bam` file for the full dataset. The file size in a Linux environment was `30766633211`.
+     - **`SM-74P4M_full.unmap.bam`:** A `unmap.bam` file for the full dataset. The file size in a Linux environment was `21238770786`.
+     - **`SM-74P4M_full_1.fastq.gz` and `SM-74P4M_full_2.fastq.gz`:** Paired `fastq.gz` files for the full dataset. The file sizes in a Linux environment were `8966831711` and `8984898864`, respectively.
+     - **`SM-74P4M_full_interleaved.fastq.gz`:** A interleaved `fastq.gz` file for the full dataset. The file size in a Linux environment was `14653053842`.
+     - **`SM-74P4M_small.cram`:** A `cram` file for the small dataset. The file size in a Linux environment was `3288611`.
+     - **`SM-74P4M_small.bam`:** A `bam` file for the small dataset. The file size in a Linux environment was `5206596`.
+     - **`SM-74P4M_small.unmap.bam`:** A `unmap.bam` small for the full dataset. The file size in a Linux environment was `3544499`.
+     - **`SM-74P4M_small_1.fastq.gz` and `SM-74P4M_small_2.fastq.gz`:** Paired `fastq.gz` files for the small dataset. The file sizes in a Linux environment were `1456295` and `1460187`, respectively.
+     - **`SM-74P4M_small_interleaved.fastq.gz`:** A interleaved `fastq.gz` file for the small dataset. The file size in a Linux environment was `2381216`.
 - **`germlineRNA_hg19`:** Germline RNA-Seq data mapped on hg19.
 
 
