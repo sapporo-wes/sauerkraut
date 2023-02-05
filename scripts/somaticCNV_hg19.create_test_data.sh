@@ -81,7 +81,7 @@ if [ ! -f ${DATA_DIR}/${sample}_small.cram ] ; then
 	${SRC_DIR}/Tools/samtools-extract-by-region-from-cram-to-cram.cwl \
 	--cram ${DATA_DIR}/${sample}_full.cram \
 	--reference ${REF_DIR}/Homo_sapiens_assembly19.fasta \
-	--region chr1:1000001-1200000 \
+	--region 1:1000001-1200000 \
 	--prefix ${sample}_small
     echo "...done."
     echo "----------------------------------------------"
