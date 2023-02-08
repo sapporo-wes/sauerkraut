@@ -78,6 +78,7 @@ $ cd /path/to/working/directory/
 $ python -m venv cwlenv
 $ . cwlenv/bin/activate
 $ python -m pip install --upgrade pip
+$ pip install cwltool
 ```
 
 Please confirm the `cwltool` version:
