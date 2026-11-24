@@ -134,7 +134,7 @@ if [ ! -f ${DATA_DIR}/${sample}_small.unmap.bam ] ; then
     echo "Create small-ubam"
     cd ${DATA_DIR}
     cwltool --singularity \
-	${SRC_DIR}/Tools/gatk4-RevertSam \
+	${SRC_DIR}/Tools/gatk4-RevertSam.cwl \
 	--bam ${DATA_DIR}/${sample}_small.bam
     echo "...done."
     echo "----------------------------------------------"
@@ -160,7 +160,7 @@ if [ ! -f ${DATA_DIR}/${sample}_full.unmap.bam ] ; then
     echo "Create full-ubam"
     cd ${DATA_DIR}
     cwltool --singularity \
-	${SRC_DIR}/Tools/gatk4-RevertSam \
+	${SRC_DIR}/Tools/gatk4-RevertSam.cwl \
 	--bam ${DATA_DIR}/${sample}_full.bam
     echo "...done."
     echo "----------------------------------------------"
