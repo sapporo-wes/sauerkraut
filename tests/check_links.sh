@@ -72,7 +72,18 @@ trap 'rm -rf "$TMP"' EXIT
 # Each distinct URL is requested once, even if several files list it.
 cat "${FILES[@]}" | grep . | sort -u > "$TMP/urls.txt"
 echo "Checking $(wc -l < "$TMP/urls.txt" | tr -d ' ') URLs from ${#FILES[@]} files ..." 1>&2
-xargs -P "$JOBS" -n 1 "$0" --check-one < "$TMP/urls.txt" > "$TMP/results.tsv"
+xargs -P "$JOBS" -n 1 "$0" --check-one < "$TMP/urls.txt" > "$TMP/first.tsv"
+
+# Servers that limit simultaneous connections can time out under parallel
+# requests. Check the failed URLs once more, one at a time.
+grep '^OK' "$TMP/first.tsv" > "$TMP/results.tsv"
+grep '^DEAD' "$TMP/first.tsv" | cut -f 4 > "$TMP/retry.txt"
+if [ -s "$TMP/retry.txt" ] ; then
+  echo "Checking $(wc -l < "$TMP/retry.txt" | tr -d ' ') failed URLs again ..." 1>&2
+  while read -r url ; do
+    check_one "$url" >> "$TMP/results.tsv"
+  done < "$TMP/retry.txt"
+fi
 
 n_ok=0
 n_dead=0
