@@ -100,25 +100,25 @@ $ git clone https://github.com/sapporo-wes/sauerkraut.git
 Download reference file, index files, and resource files from the URLs listed in **[reference_hg38.download_links.txt](./download_links/reference_hg38.download_links.txt)** by executing the following commnds:
 ```
 $ cd /path/to/working/directory/
-$ OUTDIR=reference_hg38 ; mkdir -p $OUTDIR ; for url in `cat sauerkraut/download_links/reference_hg38.download_links.txt` ; do echo $url ; file=`basename $url` ; if [ ! -f ${OUTDIR}/$file ] ; then wget $url -O ${OUTDIR}/$file ; fi ; done
+$ sauerkraut/scripts/download.sh sauerkraut/download_links/reference_hg38.download_links.txt reference_hg38
 ```
 
 Download structural variation (SV)-related resource files from the URLs listed in **[reference_hg38_sv.download_links.txt](./download_links/reference_hg38_sv.download_links.txt)** by executing the following commnds:
 ```
 $ cd /path/to/working/directory/
-$ OUTDIR=reference_hg38/sv ; mkdir -p $OUTDIR ; for url in `cat sauerkraut/download_links/reference_hg38_sv.download_links.txt` ; do echo $url ; file=`basename $url` ; if [ ! -f ${OUTDIR}/$file ] ; then wget $url -O ${OUTDIR}/$file ; fi ; done
+$ sauerkraut/scripts/download.sh sauerkraut/download_links/reference_hg38_sv.download_links.txt reference_hg38/sv
 ```
 
 Download mitochondria (MT)-related resource files from the URLs listed in **[reference_hg38_mt.download_links.txt](./download_links/reference_hg38_mt.download_links.txt)** by executing the following commnds:
 ```
 $ cd /path/to/working/directory/
-$ OUTDIR=reference_hg38/mt ; mkdir -p $OUTDIR ; for url in `cat sauerkraut/download_links/reference_hg38_mt.download_links.txt` ; do echo $url ; file=`basename $url` ; if [ ! -f ${OUTDIR}/$file ] ; then wget $url -O ${OUTDIR}/$file ; fi ; done
+$ sauerkraut/scripts/download.sh sauerkraut/download_links/reference_hg38_mt.download_links.txt reference_hg38/mt
 ```
 
 Download somatic-related resource files from the URLs listed in **[reference_hg38_somatic.download_links.txt](./download_links/reference_hg38_somatic.download_links.txt)** by executing the following commnds:
 ```
 $ cd /path/to/working/directory/
-$ OUTDIR=reference_hg38/somatic ; mkdir -p $OUTDIR ; for url in `cat sauerkraut/download_links/reference_hg38_somatic.download_links.txt` ; do echo $url ; file=`basename $url` ; if [ ! -f ${OUTDIR}/$file ] ; then wget $url -O ${OUTDIR}/$file ; fi ; done
+$ sauerkraut/scripts/download.sh sauerkraut/download_links/reference_hg38_somatic.download_links.txt reference_hg38/somatic
 ```
 
 Calculate bwa index files and create small test data by executing the following commands:
@@ -267,19 +267,19 @@ The following files will be downloaded or created:
 Download reference file, index files, and resource files from the URLs listed in **[reference_hg19.download_links.txt](./download_links/reference_hg19.download_links.txt)** by executing the following commnds:
 ```
 $ cd /path/to/working/directory/
-$ OUTDIR=reference_hg19 ; mkdir -p $OUTDIR ; for url in `cat sauerkraut/download_links/reference_hg19.download_links.txt` ; do echo $url ; file=`basename $url` ; if [ ! -f ${OUTDIR}/$file ] ; then wget $url -O ${OUTDIR}/$file ; fi ; done
+$ sauerkraut/scripts/download.sh sauerkraut/download_links/reference_hg19.download_links.txt reference_hg19
 ```
 
 Download somatic-related resource files from the URLs listed in **[reference_hg19_somatic.download_links.txt](./download_links/reference_hg19_somatic.download_links.txt)** by executing the following commnds:
 ```
 $ cd /path/to/working/directory/
-$ OUTDIR=reference_hg19/somatic ; mkdir -p $OUTDIR ; for url in `cat sauerkraut/download_links/reference_hg19_somatic.download_links.txt` ; do echo $url ; file=`basename $url` ; if [ ! -f ${OUTDIR}/$file ] ; then wget $url -O ${OUTDIR}/$file ; fi ; done
+$ sauerkraut/scripts/download.sh sauerkraut/download_links/reference_hg19_somatic.download_links.txt reference_hg19/somatic
 ```
 
 Download RNA-seq related resource files from the URLs listed in **[reference_hg19_rna.download_links.txt](./download_links/reference_hg19_rna.download_links.txt)** by executing the following commnds:
 ```
 $ cd /path/to/working/directory/
-$ OUTDIR=reference_hg19/rna ; mkdir -p $OUTDIR ; for url in `cat sauerkraut/download_links/reference_hg19_rna.download_links.txt` ; do echo $url ; file=`basename $url` ; if [ ! -f ${OUTDIR}/$file ] ; then wget $url -O ${OUTDIR}/$file ; fi ; done
+$ sauerkraut/scripts/download.sh sauerkraut/download_links/reference_hg19_rna.download_links.txt reference_hg19/rna
 ```
 
 The following files will be downloaded or created:
@@ -309,7 +309,7 @@ The following files will be downloaded or created:
 Download cram files from the URLs listed in **[germlineWGS_hg38.download_links.txt](./download_links/germlineWGS_hg38.download_links.txt)** by executing the following commnds:
 ```
 $ cd /path/to/working/directory/
-$ OUTDIR=germlineWGS_hg38 ; mkdir -p $OUTDIR ; for url in `cat sauerkraut/download_links/germlineWGS_hg38.download_links.txt` ; do echo $url ; file=`basename $url` ; if [ ! -f ${OUTDIR}/$file ] ; then wget $url -O ${OUTDIR}/$file ; fi ; done
+$ sauerkraut/scripts/download.sh sauerkraut/download_links/germlineWGS_hg38.download_links.txt germlineWGS_hg38
 ```
 Note that this step may take several hours, and therefore, **the use of `nohup` or job scheduler such as `slurm` is recommended.**
 
@@ -579,7 +579,7 @@ The following files will be downloaded or created:
 Download bam files from the URLs listed in **[somaticWGS_hg38.download_links.txt](./download_links/somaticWGS_hg38.download_links.txt)** by executing the following commnds:
 ```
 $ cd /path/to/working/directory/
-$ OUTDIR=somaticWGS_hg38 ; mkdir -p $OUTDIR ; for url in `cat sauerkraut/download_links/somaticWGS_hg38.download_links.txt` ; do echo $url ; file=`basename $url` ; if [ ! -f ${OUTDIR}/$file ] ; then wget $url -O ${OUTDIR}/$file ; fi ; done
+$ sauerkraut/scripts/download.sh sauerkraut/download_links/somaticWGS_hg38.download_links.txt somaticWGS_hg38
 ```
 Note that this step may take several hours, and therefore, **the use of `nohup` or job scheduler such as `slurm` is recommended.**
 
@@ -646,7 +646,7 @@ The following files will be downloaded or created:
 Download bam files from the URLs listed in **[somaticCNV_hg19.download_links.txt](./download_links/somaticCNV_hg19.download_links.txt)** by executing the following commnds:
 ```
 $ cd /path/to/working/directory/
-$ OUTDIR=somaticCNV_hg19 ; mkdir -p $OUTDIR ; for url in `cat sauerkraut/download_links/somaticCNV_hg19.download_links.txt` ; do echo $url ; file=`basename $url` ; if [ ! -f ${OUTDIR}/$file ] ; then wget $url -O ${OUTDIR}/$file ; fi ; done
+$ sauerkraut/scripts/download.sh sauerkraut/download_links/somaticCNV_hg19.download_links.txt somaticCNV_hg19
 ```
 Note that this step may take several hours, and therefore, **the use of `nohup` or job scheduler such as `slurm` is recommended.**
 
@@ -715,7 +715,7 @@ The following files will be downloaded or created:
 Download bam files from the URLs listed in **[germlineRNA_hg19.download_links.txt](./download_links/germlineRNA_hg19.download_links.txt)** by executing the following commnds:
 ```
 $ cd /path/to/working/directory/
-$ OUTDIR=germlineRNA_hg19 ; mkdir -p $OUTDIR ; for url in `cat sauerkraut/download_links/germlineRNA_hg19.download_links.txt` ; do echo $url ; file=`basename $url` ; if [ ! -f ${OUTDIR}/$file ] ; then wget $url -O ${OUTDIR}/$file ; fi ; done
+$ sauerkraut/scripts/download.sh sauerkraut/download_links/germlineRNA_hg19.download_links.txt germlineRNA_hg19
 ```
 Note that this step may take several hours, and therefore, **the use of `nohup` or job scheduler such as `slurm` is recommended.**
 
