@@ -23,6 +23,9 @@ for url in $(cat "$PATH_TO_DOWNLOAD_LINKS_TXT") ; do
   echo "$url"
   file=$(basename "$url")
   if [ ! -f "${OUTDIR}/$file" ] ; then
-    wget "$url" -O "${OUTDIR}/$file"
+    # Download under a temporary name so that an interrupted download is
+    # never mistaken for a complete file on the next run.
+    wget "$url" -O "${OUTDIR}/$file.part"
+    mv "${OUTDIR}/$file.part" "${OUTDIR}/$file"
   fi
 done
