@@ -121,6 +121,17 @@ if [ ! -f ${REF_DIR}/Homo_sapiens_assembly38.fasta.amb ] ||
     echo ""
 fi
 
+if [ ! -f ${REF_DIR}/Homo_sapiens_assembly38.fasta.alt ] && [ -f ${REF_DIR}/Homo_sapiens_assembly38.fasta.64.alt ] ; then
+    echo ""
+    echo "----------------------------------------------"
+    echo "Create full-ALT"
+    cd ${REF_DIR}
+    cp Homo_sapiens_assembly38.fasta.64.alt Homo_sapiens_assembly38.fasta.alt
+    echo "...done."
+    echo "----------------------------------------------"
+    echo ""
+fi
+
 if [ ! -f ${REF_DIR}/Homo_sapiens_assembly38.small.fasta.alt ] ; then
     echo ""
     echo "----------------------------------------------"
