@@ -745,3 +745,22 @@ The following files will be downloaded or created:
 |--mgibio_samtools:1.16.1.sif
 ```
 
+
+## Tests
+
+The `tests` directory contains two scripts.
+
+**`tests/test_download.sh`** tests `scripts/download.sh` and the download commands written in this README. It does not access the internet.
+```
+$ sauerkraut/tests/test_download.sh
+```
+
+**`tests/check_links.sh`** checks that every URL listed in `download_links` is still alive. It requires `curl` and requests only headers, so no data file is downloaded. It exits with 1 if any URL is dead.
+```
+$ sauerkraut/tests/check_links.sh
+```
+
+To check specific files only, give them as arguments:
+```
+$ sauerkraut/tests/check_links.sh sauerkraut/download_links/reference_hg38.download_links.txt
+```
